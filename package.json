@@ -30,7 +30,7 @@
         },
         "options": {
             "type": "string",
-            "default": "-filter-header=./ -checks=*",
+            "default": "-header-filter=./ -checks=*",
             "description": "Options for clang-tidy",
             "order": 2
         }
