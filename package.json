@@ -23,6 +23,7 @@
     },
     "configSchema": {
         "execPath": {
+            "title": "Executable path",
             "type": "string",
             "default": "clang-tidy",
             "description": "Command or full path to clang-tidy",
@@ -31,6 +32,7 @@
         "options": {
             "type": "string",
             "description": "If you don't have a config file, try `-checks=*`",
+            "default": "",
             "order": 2
         },
         "timeout": {
