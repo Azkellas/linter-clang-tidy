@@ -1,0 +1,38 @@
+{
+    "name": "linter-clang-tidy",
+    "main": "./lib/linter-clang-tidy",
+    "version": "0.0.0",
+    "description": "Linter for clang-tidy on atom",
+    "keywords": [
+    ],
+    "repository": "https://github.com/atom/linter-clang-tidy",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+        "atom-package-deps": "^4.5.0",
+        "atom-linter": "^10.0.0"
+    },
+    "providedServices": {
+        "linter": {
+            "versions": {
+                "2.0.0": "provideLinter"
+            }
+        }
+    },
+    "configSchema": {
+        "execPath": {
+            "type": "string",
+            "default": "clang-tidy",
+            "description": "Command or full path to clang-tidy",
+            "order": 1
+        },
+        "options": {
+            "type": "string",
+            "default": "-header-filter=./ -checks=*",
+            "description": "Options for clang-tidy",
+            "order": 2
+        }
+    }
+}
