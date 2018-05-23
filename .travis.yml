@@ -1,6 +1,9 @@
 ### Project specific config ###
-language: generic
+language: node_js
 
+install:
+    - sudo apt install clang
+    - sudo apt install clang-tidy
 env:
   global:
     - APM_TEST_PACKAGES=""
@@ -32,7 +35,7 @@ branches:
 git:
   depth: 10
 
-sudo: false
+sudo: true
 
 dist: trusty
 
