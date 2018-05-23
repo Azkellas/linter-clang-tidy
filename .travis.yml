@@ -4,9 +4,6 @@ language: node_js
 os:
     - linux
 
-install:
-    - sudo apt-get install clang
-    - sudo apt-get install clang-tidy
 env:
   global:
     - APM_TEST_PACKAGES=""
@@ -15,6 +12,12 @@ env:
   matrix:
     - ATOM_CHANNEL=stable
     - ATOM_CHANNEL=beta
+
+compiler:
+    - clang
+
+include:
+    - clang-tidy
 
 ### Generic setup follows ###
 script:
