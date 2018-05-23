@@ -16,6 +16,9 @@ env:
 compiler:
     - clang
 
+install:
+    - clang-tidy-6.0
+
 include:
     - clang-tidy-6.0
 
