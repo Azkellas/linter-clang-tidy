@@ -1,5 +1,7 @@
 'use babel';
 
+const { exec } = require('child_process');
+
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
@@ -24,6 +26,24 @@ describe('LinterClangTidy', () => {
 
     it('is active', () =>
         expect(atom.packages.isPackageActive('linter-clang-tidy')).toBe(true));
+
+
+    it('found clang-tidy', () => {
+        filename = __dirname + '/files/good.cpp';
+        const execPath = atom.config.get('linter-clang-tidy.execPath');
+        exec(execPath + ' ' + filename, (err, stdout, stderr) => {
+            if (err) {
+                console.log("command failed");
+                expect(0).toBe(1);
+            }
+            else if (stderr.search(execPath) !== -1) {
+                console.log("could not find exec");
+                expect(0).toBe(2);
+            }
+            else
+                expect(1).toBe(1);
+        });
+    });
 
     it('checks bad.cpp', () => {
         waitsForPromise(() => {
