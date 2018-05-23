@@ -23,6 +23,7 @@
     },
     "configSchema": {
         "execPath": {
+            "title": "Executable path",
             "type": "string",
             "default": "clang-tidy",
             "description": "Command or full path to clang-tidy",
@@ -30,9 +31,15 @@
         },
         "options": {
             "type": "string",
-            "default": "-header-filter=./ -checks=*",
-            "description": "Options for clang-tidy",
+            "description": "If you don't have a config file, try `-checks=*`",
+            "default": "",
             "order": 2
+        },
+        "timeout": {
+            "type": "number",
+            "description": "Time allowed to clang-tidy to check the project, in seconds",
+            "default": 60,
+            "order": 3
         }
     }
 }
