@@ -28,7 +28,7 @@ describe('LinterClangTidy', () => {
         expect(atom.packages.isPackageActive('linter-clang-tidy')).toBe(true));
 
 
-    it('found clang-tidy', () => {
+    it('finds clang-tidy', () => {
         filename = __dirname + '/files/good.cpp';
         const execPath = atom.config.get('linter-clang-tidy.execPath');
         exec(execPath + ' ' + filename, (err, stdout, stderr) => {
