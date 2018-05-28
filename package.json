@@ -3,9 +3,9 @@
     "main": "./lib/linter-clang-tidy",
     "version": "0.0.0",
     "description": "Linter for clang-tidy on atom",
-    "keywords": [
+    "keywords": ["linter", "clang", "clang-tidy", "cpp", "c++", "atom"
     ],
-    "repository": "https://github.com/atom/linter-clang-tidy",
+    "repository": "https://github.com/Azkellas/linter-clang-tidy",
     "license": "MIT",
     "engines": {
         "atom": ">=1.0.0 <2.0.0"
