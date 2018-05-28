@@ -1,7 +1,7 @@
 {
   "name": "linter-clang-tidy",
   "main": "./lib/linter-clang-tidy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Linter for clang-tidy on atom",
   "keywords": [
     "linter",
