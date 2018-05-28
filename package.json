@@ -1,45 +1,51 @@
 {
-    "name": "linter-clang-tidy",
-    "main": "./lib/linter-clang-tidy",
-    "version": "0.0.0",
-    "description": "Linter for clang-tidy on atom",
-    "keywords": ["linter", "clang", "clang-tidy", "cpp", "c++", "atom"
-    ],
-    "repository": "https://github.com/Azkellas/linter-clang-tidy",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0 <2.0.0"
-    },
-    "dependencies": {
-        "atom-package-deps": "^4.5.0",
-        "atom-linter": "^10.0.0"
-    },
-    "providedServices": {
-        "linter": {
-            "versions": {
-                "2.0.0": "provideLinter"
-            }
-        }
-    },
-    "configSchema": {
-        "execPath": {
-            "title": "Executable path",
-            "type": "string",
-            "default": "clang-tidy",
-            "description": "Command or full path to clang-tidy",
-            "order": 1
-        },
-        "options": {
-            "type": "string",
-            "description": "If you don't have a config file, try `-checks=*`",
-            "default": "",
-            "order": 2
-        },
-        "timeout": {
-            "type": "number",
-            "description": "Time allowed to clang-tidy to check the project, in seconds",
-            "default": 60,
-            "order": 3
-        }
+  "name": "linter-clang-tidy",
+  "main": "./lib/linter-clang-tidy",
+  "version": "0.1.0",
+  "description": "Linter for clang-tidy on atom",
+  "keywords": [
+    "linter",
+    "clang",
+    "clang-tidy",
+    "cpp",
+    "c++",
+    "atom"
+  ],
+  "repository": "https://github.com/Azkellas/linter-clang-tidy",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-package-deps": "^4.5.0",
+    "atom-linter": "^10.0.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
     }
+  },
+  "configSchema": {
+    "execPath": {
+      "title": "Executable path",
+      "type": "string",
+      "default": "clang-tidy",
+      "description": "Command or full path to clang-tidy",
+      "order": 1
+    },
+    "options": {
+      "type": "string",
+      "description": "If you don't have a config file, try `-checks=*`",
+      "default": "",
+      "order": 2
+    },
+    "timeout": {
+      "type": "number",
+      "description": "Time allowed to clang-tidy to check the project, in seconds",
+      "default": 60,
+      "order": 3
+    }
+  }
 }
